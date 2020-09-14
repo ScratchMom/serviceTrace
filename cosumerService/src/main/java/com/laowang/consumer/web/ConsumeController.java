@@ -24,13 +24,6 @@ public class ConsumeController {
 
     @GetMapping("/consume")
     public void consume() {
-        String URL = "http://127.0.0.1:8083/api/server/get?appId={appId}&dbName={dbName}";
-//        RestTemplate restTemplate = new RestTemplate();
-//        Map<String, String> map = new HashMap<>();
-//        map.put("appId", "11");
-//        map.put("dbName", "33");
-//        JSONObject forObject = restTemplate.getForObject(URL, JSONObject.class, map);
-
         String str = service.doService();
         log.info(">>> jsonObject = [{}]", str);
     }

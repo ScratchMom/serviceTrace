@@ -14,6 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/api/product")
 public interface FeignService {
     @GetMapping("/api/server/get")
-    public String product(@RequestParam("appId") String appId,
-                          @RequestParam("dbName") String dbName);
+    String product(@RequestParam("appId") String appId,
+                   @RequestParam("dbName") String dbName);
 }
